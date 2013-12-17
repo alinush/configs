@@ -95,6 +95,7 @@ alias agr='sudo apt-get remove'
 alias agu='sudo apt-get update'
 alias ag='sudo apt-get'
 alias acs='sudo apt-cache search'
+alias diff='colordiff'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
