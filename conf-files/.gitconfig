@@ -1,0 +1,7 @@
+[user]
+	name = Alin Tomescu
+	email = alinush@mit.edu
+[diff]
+	color = true
+[alias]
+	st = status
