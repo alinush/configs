@@ -1,7 +1,7 @@
 configs
 =======
 
-Linux configs (.bashrc, .vimrc, .gitconfig) that become a pain to maintain across three different machines.
+Linux configs (.bash_aliases, .vimrc, .gitconfig) that become a pain to maintain across three different machines.
 
 As of now, all of them go into the home directory.
 
