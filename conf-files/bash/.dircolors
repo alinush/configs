@@ -1,0 +1,125 @@
+# add this to your bashrc
+# Replace dircolors/ls with gdircolors/gls on mac
+# eval `dircolors ~/.dir_colors`
+# alias ls='ls --color=auto'
+# Work in progress...
+TERM xterm-256color
+#TERM term-color
+
+# ATTR;TXT;BG
+# Attribute codes:
+# 00=none 01=bold 04=underscore 05=blink 07=reverse 08=concealed
+# Text color codes:
+# 30=black 31=red 32=green 33=yellow 34=blue 35=magenta 36=cyan 37=white
+# Background color codes:
+# 40=black 41=red 42=green 43=yellow 44=blue 45=magenta 46=cyan 47=white
+NORMAL      00
+FILE        00
+DIR         00;38;5;26
+LINK        00;35
+FIFO        40;33
+SOCK        07;33
+DOOR        01;35
+BLK         40;33;01
+CHR         40;33;01
+ORPHAN      01;05;37;41 
+MISSING     01;05;37;41
+
+# This is for files with execute permission:
+EXEC 00;31
+
+# Extension highliting
+# archives
+.tar    04;38;5;226
+.tgz    04;38;5;226
+.tar.gz 04;38;5;226
+.arj    04;38;5;226
+.taz    04;38;5;226
+.lzh    04;38;5;226
+.zip    04;38;5;226
+.rar    04;38;5;226
+.z      04;38;5;226
+.Z      04;38;5;226
+.gz     04;38;5;226
+.bz2    04;38;5;226
+
+# Packages
+.deb 04;38;5;226
+.rpm 04;38;5;226
+.dmg 04;38;5;226
+.iso 04;38;5;226
+.dmg 04;38;5;226
+.pkg 04;38;5;226
+
+## media formats
+# images
+.jpg  00;38;5;39
+.jpeg 00;38;5;39
+.png  00;38;5;39
+.gif  00;38;5;39
+.bmp  00;38;5;39
+.ppm  00;38;5;39
+.tga  00;38;5;39
+.xbm  00;38;5;39
+.xpm  00;38;5;39
+.tif  00;38;5;39
+.svg  00;38;5;39
+# videos
+.mkv 00;38;5;39
+.mpg 00;38;5;39
+.avi 00;38;5;39
+.mp4 00;38;5;39
+# audio
+.mp3  00;38;5;39
+.flac 00;38;5;39
+.wav  00;38;5;39
+
+## documents
+.pdf  00;38;5;197
+.djvu 00;38;5;197
+.epub 00;38;5;197
+.doc  00;38;5;197
+.doc  00;38;5;197
+.docx 00;38;5;197
+.ppt  00;38;5;197
+.pptx 00;38;5;197
+.xls  00;38;5;197
+.xlsx 00;38;5;197
+.odt  00;38;5;197
+.fodt 00;38;5;197
+.odt  00;38;5;197
+.fodt 00;38;5;197
+.odp  00;38;5;197
+.fodp 00;38;5;197
+.ods  00;38;5;197
+.fods 00;38;5;197
+.txt  00;38;5;197
+.md   00;38;5;197
+.rst  00;38;5;197
+.rtf  00;38;5;197
+.tex  00;38;5;197
+
+## libs
+.dylib 00;38;5;106
+.so    00;38;5;106
+.a     00;38;5;94
+
+## source files
+# python
+.py   00;38;5;28
+# assembly
+.asm  00;38;5;106
+# c
+.c    00;38;5;190
+.cpp  00;38;5;190
+.h    00;38;5;172
+# fortran
+.f    00;38;5;190
+# java
+.java 00;38;5;94
+.jar  00;38;5;142
+# web
+.css  00;38;5;170
+.js   00;38;5;172
+.json 00;38;5;166
+.html 00;38;5;125
