@@ -50,34 +50,39 @@ git_prompt() {
 }
 
 # Called after every command to update prompt
-update_prompt() {
-    RET=$?;
-    #write the current terminal's history to the history file
-    #history -n
-    history -a
+#update_prompt() {
+#    RET=$?;
+#    #write the current terminal's history to the history file
+#    #history -n
+#    history -a
 
-    # Set the return symbol
-    #SPECHARG="☯"
-    SPECHARG="$"
-    SPECHARB="✕"
-    RET_VALUE="$(if [[ $RET == 0 ]]; then echo -ne "${txtylw}$SPECHARG"; else echo -ne "${txtred}$SPECHARB"; fi;)"
+#    # Set the return symbol
+#    #SPECHARG="☯"
+#    SPECHARG="$"
+#    SPECHARB="✕"
+#    RET_VALUE="$(if [[ $RET == 0 ]]; then echo -ne "${txtylw}$SPECHARG"; else echo -ne "${txtred}$SPECHARB"; fi;)"
 
-    # Always move cursor back to the start of line
-    PS1="\[\033[G\]"
-    # Set the title to user@host
-    #PS1="$PS1${txtylw}┌──"
-    local user_color="${txtgrn}"
-    if [ `whoami` == 'root' ]; then
-        user_color="${blired}"
-    fi
-    PS1="$PS1${user_color}\[\u\]${txtylw}@${txtwht}\[\h\]"
-    #[directory]
-    PS1="$PS1${txtgrn}[${txtylw}\w${txtgrn}]"
-    # git
-    PS1="$PS1${txtgrn}$(git_prompt)"
-    # go to next line
-    #PS1="$PS1${txtylw}\n└─>
-    PS1="$PS1$RET_VALUE ${txtrst}"
+#    # Always move cursor back to the start of line
+#    PS1="\[\033[G\]"
+#    # Set the title to user@host
+#    #PS1="$PS1${txtylw}┌──"
+#    local user_color="${txtgrn}"
+#    if [ `whoami` == 'root' ]; then
+#        user_color="${blired}"
+#    fi
+#    PS1="$PS1${user_color}\[\u\]${txtylw}@${txtwht}\[\h\]"
+#    #[directory]
+#    PS1="$PS1${txtgrn}[${txtylw}\w${txtgrn}]"
+#    # git
+#    PS1="$PS1${txtgrn}$(git_prompt)"
+#    # go to next line
+#    #PS1="$PS1${txtylw}\n└─>
+#    PS1="$PS1$RET_VALUE ${txtrst}"
+#}
+
+update_prompt()
+{
+    export PS1="\[\033[00;32m\]\u@\h [${txtylw}\w${txtgrn}]\[\033[01;33m\]$(__git_ps1)\[\033[01;34m\] \$\[\033[00m\] "
 }
 
 PROMPT_COMMAND=update_prompt
