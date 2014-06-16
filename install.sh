@@ -1,4 +1,4 @@
-mv ~/.bash_aliases ~/.bash_aliases_old
+[ -f ~/bash_aliases ] && mv ~/.bash_aliases ~/.bash_aliases_old
 ln -s ~/repos/configs/conf-files/bash/.bash_aliases ~/.bash_aliases
 
 mv ~/.vimrc ~/.vimrc_old
