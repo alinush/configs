@@ -16,6 +16,8 @@ elif [ -f /usr/share/git/completion/git-completion.bash ] && [ -f /usr/share/git
     . /usr/share/git/completion/git-completion.bash
     . /usr/share/git/completion/git-prompt.sh
     GIT_COMPLETION=1
+elif [ -f /usr/share/git-core/contrib/completion/git-prompt.sh ]; then
+    . /usr/share/git-core/contrib/completion/git-prompt.sh
 fi
 
 # Calculate minutes since last git commit
