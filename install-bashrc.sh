@@ -1,3 +1,5 @@
+set -e 
+
 CONFDIR=~/repos/configs/conf-files/bash
 BASHRC=~/.bashrc
 
