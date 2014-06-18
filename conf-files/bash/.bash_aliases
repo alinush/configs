@@ -1,3 +1,24 @@
+#!/bin/bash
+
+function gacp() {
+    if [ $# -eq 0 ]; then
+        echo "ERROR: You need to provided a commit message as a parameter"
+        return 1
+    fi
+
+    echo
+    echo "Adding all files in `pwd`..."
+    git add . || return 1 
+
+    echo
+    echo "Committing with message: \"$@\" ..."
+    git commit -m "$*" || return 1
+
+    echo
+    echo "Pushing changes..."
+    git push || return 1
+}
+
 alias gpr='git pull --rebase'
 alias gst='git status'
 alias gdi='git diff'
