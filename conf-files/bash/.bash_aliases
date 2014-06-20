@@ -19,9 +19,10 @@ function gacp() {
     git push || return 1
 }
 
+alias gdi='git diff'
+alias gls='git logshort'
 alias gpr='git pull --rebase'
 alias gst='git status'
-alias gdi='git diff'
 
 alias agi='sudo apt-get install'
 alias agr='sudo apt-get remove'
