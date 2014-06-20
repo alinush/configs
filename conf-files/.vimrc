@@ -6,6 +6,7 @@ set expandtab
 set background=dark
 set number
 set hlsearch
+set paste
 
 au FileType tex set textwidth=80
 au BufRead,BufNewFile *.md set filetype=mkd
