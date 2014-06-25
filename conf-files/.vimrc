@@ -20,6 +20,7 @@ set directory=~/.backup/vim/swap
 
 au FileType tex set textwidth=80
 au BufRead,BufNewFile *.md set filetype=mkd
+au FileType make setlocal noexpandtab
 
 " Make <Esc><Esc> clear the highlighted search term
 nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc>
