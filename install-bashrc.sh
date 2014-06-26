@@ -1,6 +1,7 @@
 set -e 
+scriptdir=$(readlink -f $(dirname $0))
 
-CONFDIR=~/repos/configs/conf-files/bash
+CONFDIR=$scriptdir/conf-files/bash
 BASHRC=~/.bashrc
 
 echo ""                         >> $BASHRC

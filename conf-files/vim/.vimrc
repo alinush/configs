@@ -11,7 +11,7 @@ set paste           " Prevent weird paste behaviour where the pasted text is ind
 set ruler           " See the column numbers
 set backupskip=     " Backup everything, including /tmp files
 
-colorscheme delek
+colorscheme monokai
 
 " Backup and swap file directories
 set backup

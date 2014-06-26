@@ -1,4 +1,5 @@
 set -e 
+scriptdir=$(readlink -f $(dirname $0))
 
 sudo apt-get install grc
-ln -s ~/repos/configs/conf-files/grc ~/.grc
+ln -s $scriptdir/conf-files/grc ~/.grc
