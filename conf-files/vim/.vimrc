@@ -10,7 +10,7 @@ set hlsearch        " Highlight searched items
 set paste           " Prevent weird paste behaviour where the pasted text is indented continuosly
 set ruler           " See the column numbers
 set backupskip=     " Backup everything, including /tmp files
-
+set showmatch       " Highlight matching braces
 colorscheme monokai
 
 " Backup and swap file directories
@@ -21,6 +21,9 @@ set directory=~/.backup/vim/swap
 au FileType tex set textwidth=80
 au BufRead,BufNewFile *.md set filetype=mkd
 au FileType make setlocal noexpandtab
+"au BufRead,BufNewFile *.hpp set filetype=cpp
+au BufRead,BufNewFile *.hpp syntax reset
+au BufRead,BufNewFile *.cpp syntax reset
 
 " Make <Esc><Esc> clear the highlighted search term
 nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc>
