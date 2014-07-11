@@ -22,8 +22,8 @@ au FileType tex set textwidth=80
 au BufRead,BufNewFile *.md set filetype=mkd
 au FileType make setlocal noexpandtab
 "au BufRead,BufNewFile *.hpp set filetype=cpp
-au BufRead,BufNewFile *.hpp syntax reset
-au BufRead,BufNewFile *.cpp syntax reset
+"au BufRead,BufNewFile *.hpp syntax reset
+"au BufRead,BufNewFile *.cpp syntax reset
 
 " Make <Esc><Esc> clear the highlighted search term
 nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc>
