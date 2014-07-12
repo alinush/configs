@@ -39,4 +39,4 @@ alias diff='colordiff'
 
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
-
+alias vim='vim -O'

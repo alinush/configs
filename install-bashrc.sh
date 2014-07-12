@@ -1,19 +1,28 @@
+#!/bin/bash
+
 set -e 
 scriptdir=$(readlink -f $(dirname $0))
 
-CONFDIR=$scriptdir/conf-files/bash
-BASHRC=~/.bashrc
+confdir=$scriptdir/conf-files/bash
+bashrc=~/.bashrc
 
-echo ""                         >> $BASHRC
+echo "" >> $bashrc
+echo "# Some custom modifications" >> $bashrc
 
+# Source ~/.bash_aliases in ~/.bashrc when on Fedora
 if grep Fedora /etc/issue >/dev/null; then
-    echo " . /etc/bashrc" >> $BASHRC
-    echo "[ -f ~/.bash_aliases ] && . ~/.bash_aliases" >> $BASHRC
+    echo " . /etc/bashrc" >> $bashrc
+    echo "[ -f ~/.bash_aliases ] && . ~/.bash_aliases" >> $bashrc
 fi
 
-echo ". $CONFDIR/colors.sh"     >> $BASHRC
-echo ". $CONFDIR/grc.sh"        >> $BASHRC
-echo ". $CONFDIR/history.sh"    >> $BASHRC
-echo ". $CONFDIR/less.sh"       >> $BASHRC
-echo ". $CONFDIR/prompt.sh"     >> $BASHRC
-echo ". $CONFDIR/dircolors.sh"  >> $BASHRC
+# Setup history, less, dircolors, grc aliases and the bash prompt
+echo ". $confdir/history.sh"            >> $bashrc
+echo ". $confdir/less.sh"               >> $bashrc
+echo ". $confdir/setup-colors.sh"       >> $bashrc
+echo ". $confdir/setup-grc-aliases.sh"  >> $bashrc
+echo ". $confdir/setup-bash-prompt.sh"  >> $bashrc
+echo ". $confdir/setup-dircolors.sh"    >> $bashrc
+
+# Setup .bash_aliases
+[ -f ~/.bash_aliases ] && mv ~/.bash_aliases ~/.bash_aliases.`date +%s`
+ln -s $scriptdir/conf-files/bash/.bash_aliases ~/.bash_aliases
