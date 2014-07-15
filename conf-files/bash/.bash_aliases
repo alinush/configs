@@ -19,6 +19,7 @@ function gacp() {
     git push || return 1
 }
 
+alias ga='git add'
 alias gdi='git diff'
 alias gls='git logshort'
 alias gpr='git pull --rebase'
