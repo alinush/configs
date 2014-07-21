@@ -20,7 +20,7 @@ function gacp() {
 }
 
 alias ga='git add'
-alias gdi='git diff'
+alias gd='git diff'
 alias gls='git logshort'
 alias gpr='git pull --rebase'
 alias gst='git status'
