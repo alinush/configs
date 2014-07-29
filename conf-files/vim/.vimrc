@@ -32,6 +32,10 @@ nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc>
 noremap <F12> <Esc>:syntax sync fromstart<CR>
 
 " Auto-build Markdown files to HTML
+" TODO: fix bug when editing a file from a directory
+" different that its containg directory, HTML file
+" is saved in the current working directory, not next
+" to the .md file as it should.
 :autocmd BufWritePost *.md
 \   silent execute '!markdown <afile> >'. 
 \   expand('<afile>:t:r').'.html'
