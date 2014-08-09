@@ -39,3 +39,6 @@ noremap <F12> <Esc>:syntax sync fromstart<CR>
 :autocmd BufWritePost *.md
 \   silent execute '!markdown <afile> >'. 
 \   expand('<afile>:t:r').'.html'
+
+":autocmd BufWritePost *.tex
+"\   silent execute '!texi2pdf <afile> >/dev/null'
