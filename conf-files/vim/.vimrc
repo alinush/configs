@@ -1,4 +1,6 @@
 syntax on           " Enable syntax highlighting
+set backspace=2
+set backspace=indent,eol,start
 set smartindent     " TODO: what is this?
 set autoindent      " This seems to make indentation work in .md files
 set tabstop=4       " How big tabs show as

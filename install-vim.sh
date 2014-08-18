@@ -1,17 +1,20 @@
 set -e
+scriptdir=$(readlink -f $(dirname $0))
 
 cd /tmp
 
 
-if cat /etc/issue | grep Ubuntu >/dev/null; then
-    echo
-    echo "Detected Ubuntu in /etc/issue"
-    echo
-    sudo apt-get install -y vim-addon-manager markdown
-    git clone https://github.com/plasticboy/vim-markdown.git
-    cd vim-markdown
-    sudo make install
-    vim-addon-manager install mkd
+if [ -f /etc/issue ] ; then
+    if cat /etc/issue | grep Ubuntu >/dev/null; then
+        echo
+        echo "Detected Ubuntu in /etc/issue"
+        echo
+        sudo apt-get install -y vim-addon-manager markdown
+        git clone https://github.com/plasticboy/vim-markdown.git
+        cd vim-markdown
+        sudo make install
+        vim-addon-manager install mkd
+    fi
 fi
 
 # Create a backup directory for vim
@@ -20,7 +23,7 @@ mkdir -p ~/.backup/vim/swap
 mkdir -p ~/.vim/colors
 
 # Create symlink to vimrc
-[ -f ~/.vimrc ] && mv ~/.vimrc ~/.vimrc_old
+[ -f ~/.vimrc ] && mv ~/.vimrc ~/.vimrc.`date +%s`
 ln -s $scriptdir/conf-files/vim/.vimrc ~/.vimrc
 
 # Add monokai color scheme
