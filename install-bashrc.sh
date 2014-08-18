@@ -10,9 +10,11 @@ echo "" >> $bashrc
 echo "# Some custom modifications" >> $bashrc
 
 # Source ~/.bash_aliases in ~/.bashrc when on Fedora
-if grep Fedora /etc/issue >/dev/null; then
-    echo " . /etc/bashrc" >> $bashrc
-    echo "[ -f ~/.bash_aliases ] && . ~/.bash_aliases" >> $bashrc
+if [ -f /etc/issue ]; then
+    if grep Fedora /etc/issue >/dev/null; then
+        echo " . /etc/bashrc" >> $bashrc
+        echo "[ -f ~/.bash_aliases ] && . ~/.bash_aliases" >> $bashrc
+    fi
 fi
 
 # Setup history, less, dircolors, grc aliases and the bash prompt
