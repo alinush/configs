@@ -6,4 +6,4 @@
 
 # VLC, git, svn
 echo "Installing some new apps..."
-sudo apt-get install vim minicom subversion git libxss1 gedit-plugins build-essential vlc apt-file indicator-cpufreq eclipse eclipse-cdt gpointing-device-settings htop iotop
+sudo apt-get install -y vim minicom subversion git libxss1 gedit-plugins build-essential vlc apt-file indicator-cpufreq eclipse eclipse-cdt gpointing-device-settings htop iotop
