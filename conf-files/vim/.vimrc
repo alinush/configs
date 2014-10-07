@@ -241,17 +241,22 @@ au FileType make setlocal noexpandtab
 " Make <Esc><Esc> clear the highlighted search term
 nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc>
 
-" Make <F12> refresh the syntax highligher
+" Make <F12> refresh the syntax highlighter
 noremap <F12> <Esc>:syntax sync fromstart<CR>
 
 " Auto-build Markdown files to HTML
 " TODO: fix bug when editing a file from a directory
-" different that its containg directory, HTML file
+" different that its containing directory, HTML file
 " is saved in the current working directory, not next
 " to the .md file as it should.
 :autocmd BufWritePost *.md
 \   silent execute '!markdown "<afile>" >"'.
 \   expand('<afile>:t:r').'".html'
+
+" Limit line length to 80 characters
+" WARNING: this will NOT auto wrap lines as you type them apparently but can be
+" useful if you auto-wrap by typing 'gqq' inside a paragraph.
+au BufRead,BufNewFile *.txt set tw=80 fo+=t
 
 ":autocmd BufWritePost *.tex
 "\   silent execute '!texi2pdf <afile> >/dev/null'
