@@ -1,7 +1,9 @@
+set -e
+
 # Set yourself as a sudoers
 me=`whoami`
 file=/etc/sudoers.d/$me
-    
+
 echo
 echo "Setting yourself ($me) as a sudoer..."
 echo

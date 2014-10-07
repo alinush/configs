@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e 
+set -e
 scriptdir=$(readlink -f $(dirname $0))
 
 confdir=$scriptdir/conf-files/bash
@@ -20,7 +20,6 @@ fi
 # Setup history, less, dircolors, grc aliases and the bash prompt
 echo ". $confdir/history.sh"            >> $bashrc
 echo ". $confdir/less.sh"               >> $bashrc
-echo ". $confdir/setup-colors.sh"       >> $bashrc
 echo ". $confdir/setup-grc-aliases.sh"  >> $bashrc
 echo ". $confdir/setup-bash-prompt.sh"  >> $bashrc
 echo ". $confdir/setup-dircolors.sh"    >> $bashrc
@@ -28,3 +27,21 @@ echo ". $confdir/setup-dircolors.sh"    >> $bashrc
 # Setup .bash_aliases
 [ -f ~/.bash_aliases ] && mv ~/.bash_aliases ~/.bash_aliases.`date +%s`
 ln -s $scriptdir/conf-files/bash/.bash_aliases ~/.bash_aliases
+
+# Setup solarized theme
+(
+    cd /tmp
+
+    git clone https://github.com/Anthony25/gnome-terminal-colors-solarized.git
+    (
+        cd gnome-terminal-colors-solarized/
+        ./install.sh -s dark -p Default
+    )
+
+    git clone https://github.com/seebi/dircolors-solarized
+    (
+        cd dircolors-solarized/
+        #cp dircolors.256dark ~/.dircolors
+        cp dircolors.ansi-dark ~/.dircolors
+    )
+)

@@ -31,6 +31,9 @@ minutes_since_last_commit() {
 
 # Add git prompt features if we're in a git directory
 # Also adds minutes_since_last_commit
+txtred="\[\033[31m\]"
+txtgrn="\[\033[32m\]"
+txtylw="\[\033[33m\]"
 git_prompt() {
     if [[ GIT_COMPLETION -eq 1 ]]; then
         local g="$(__gitdir)"
