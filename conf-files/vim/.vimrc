@@ -223,7 +223,7 @@ autocmd FilterWritePre  * :call StripTrailingWhitespace()
 autocmd BufWritePre     * :call StripTrailingWhitespace()
 
 " Show characters past 80th column as errors
-match ErrorMsg '\%>80v.\+'
+"match ErrorMsg '\%>80v.\+'
 
 " Backup and swap file directories
 set backup
