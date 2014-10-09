@@ -6,9 +6,14 @@ function gacp() {
         return 1
     fi
 
+    if [ "$*" = "." ]; then
+        echo "ERROR: A single dot ('.') is not a valid commit message ^_^!"
+        return 1
+    fi
+
     echo
     echo "Adding all files in `pwd`..."
-    git add . || return 1 
+    git add . || return 1
 
     echo
     echo "Committing with message: \"$@\" ..."
