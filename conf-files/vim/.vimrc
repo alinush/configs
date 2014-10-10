@@ -217,10 +217,10 @@ if !exists("*StripTrailingWhitespace")
     endif
   endfunction
 endif
-autocmd FileWritePre    * :call StripTrailingWhitespace()
-autocmd FileAppendPre   * :call StripTrailingWhitespace()
-autocmd FilterWritePre  * :call StripTrailingWhitespace()
-autocmd BufWritePre     * :call StripTrailingWhitespace()
+"autocmd FileWritePre    * :call StripTrailingWhitespace()
+"autocmd FileAppendPre   * :call StripTrailingWhitespace()
+"autocmd FilterWritePre  * :call StripTrailingWhitespace()
+"autocmd BufWritePre     * :call StripTrailingWhitespace()
 
 " Show characters past 80th column as errors
 "match ErrorMsg '\%>80v.\+'
