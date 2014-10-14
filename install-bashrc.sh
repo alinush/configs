@@ -26,6 +26,7 @@ echo ". $confdir/setup-dircolors.sh"    >> $bashrc
 
 # Setup .bash_aliases
 [ -f ~/.bash_aliases ] && mv ~/.bash_aliases ~/.bash_aliases.`date +%s`
+[ -L ~/.bash_aliases ] && mv ~/.bash_aliases ~/.bash_aliases.`date +%s`
 ln -s $scriptdir/conf-files/bash/.bash_aliases ~/.bash_aliases
 
 # Setup solarized theme

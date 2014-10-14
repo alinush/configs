@@ -130,7 +130,7 @@ set number
 set ruler
 
 " Enable mouse input
-set mouse=a
+set mouse=v
 set mousemodel=popup
 set selectmode=mouse
 
@@ -226,10 +226,10 @@ endif
 "match ErrorMsg '\%>80v.\+'
 
 " Backup and swap file directories
-set backup
-set backupskip=     " Backup everything, including /tmp files
-set backupdir=~/.backup/vim
-set directory=~/.backup/vim/swap
+"set backup
+"set backupskip=   " Backup everything, including /tmp files
+"set backupdir=~/.backup/vim
+"set directory=~/.backup/vim/swap
 
 au FileType tex set textwidth=80
 au BufRead,BufNewFile *.md set filetype=mkd
