@@ -150,6 +150,7 @@ set paste " fix autoindent of pasted text
 set expandtab " turn tabs to spaces
 set shiftwidth=4 " tabs are 2 spaces
 set tabstop=4
+set softtabstop=4
 "set smarttab
 "set list " show tab characters, visual whitespace
 "set listchars=tab:>.
