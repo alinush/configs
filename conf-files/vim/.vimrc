@@ -235,6 +235,9 @@ endif
 au FileType tex set textwidth=80
 au BufRead,BufNewFile *.md set filetype=mkd "expandtab shiftwidth=2 tabstop=2 softtabstop=2
 au FileType make setlocal noexpandtab
+"au BufRead,BufNewFile *.py setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
+"au FileType python setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
+
 "au BufRead,BufNewFile *.hpp set filetype=cpp
 "au BufRead,BufNewFile *.hpp syntax reset
 "au BufRead,BufNewFile *.cpp syntax reset
