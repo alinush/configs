@@ -233,7 +233,7 @@ endif
 "set directory=~/.backup/vim/swap
 
 au FileType tex set textwidth=80
-au BufRead,BufNewFile *.md set filetype=mkd
+au BufRead,BufNewFile *.md set filetype=mkd "expandtab shiftwidth=2 tabstop=2 softtabstop=2
 au FileType make setlocal noexpandtab
 "au BufRead,BufNewFile *.hpp set filetype=cpp
 "au BufRead,BufNewFile *.hpp syntax reset
@@ -245,6 +245,7 @@ nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc>
 " Make <F12> refresh the syntax highlighter
 noremap <F12> <Esc>:syntax sync fromstart<CR>
 
+let g:vim_markdown_folding_disabled=1
 " Auto-build Markdown files to HTML
 " TODO: fix bug when editing a file from a directory
 " different that its containing directory, HTML file
