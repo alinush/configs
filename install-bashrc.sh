@@ -33,7 +33,9 @@ ln -s $scriptdir/conf-files/bash/.bash_aliases ~/.bash_aliases
 (
     cd /tmp
     
-    if dpkg -s gnome-terminal 2>&1 >/dev/null; then
+    # Use -S here not -s, because -s apparently suceeds on some
+    # configurations even when the package is not installed
+    if dpkg -S gnome-terminal 2>&1 >/dev/null; then
         git clone https://github.com/Anthony25/gnome-terminal-colors-solarized.git
         (
             cd gnome-terminal-colors-solarized/
