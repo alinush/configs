@@ -114,6 +114,8 @@ colorscheme solarized
 " Other VIM settings
 " ==================
 "
+set exrc            " enable per-directory .vimrc files
+set secure          " disable unsafe commands in local .vimrc files
 
 " utf8 default encoding
 set encoding=utf8
