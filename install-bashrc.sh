@@ -32,12 +32,14 @@ ln -s $scriptdir/conf-files/bash/.bash_aliases ~/.bash_aliases
 # Setup solarized theme
 (
     cd /tmp
-
-    git clone https://github.com/Anthony25/gnome-terminal-colors-solarized.git
-    (
-        cd gnome-terminal-colors-solarized/
-        ./install.sh -s dark -p Default
-    )
+    
+    if dpkg -s gnome-terminal 2>&1 >/dev/null; then
+        git clone https://github.com/Anthony25/gnome-terminal-colors-solarized.git
+        (
+            cd gnome-terminal-colors-solarized/
+            ./install.sh -s dark -p Default
+        )
+    fi
 
     git clone https://github.com/seebi/dircolors-solarized
     (
