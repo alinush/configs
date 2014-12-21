@@ -7,6 +7,9 @@
     st = status
     logshort = log --decorate --pretty=oneline
     loglong = log --graph --stat --decorate=short
+    sdiff = ! git diff && git submodule foreach 'git diff'
+    spush = push --recurse-submodules=on-demand
+    supdate = submodule update --remote --merge
 [color]
     status = auto
     branch = auto
