@@ -238,6 +238,7 @@ au FileType tex set textwidth=80
 au FileType html setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 au FileType javascript setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 au BufRead,BufNewFile *.md set filetype=mkd "expandtab shiftwidth=2 tabstop=2 softtabstop=2
+au BufRead,BufNewFile *.go set filetype=go
 au FileType make setlocal noexpandtab
 "au BufRead,BufNewFile *.py setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 "au FileType python setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2

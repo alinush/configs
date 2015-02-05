@@ -19,6 +19,10 @@ cd /tmp
 #    fi
 #fi
 
+sudo apt-get install vim-gocomplete
+vim-addon-manager install gocode
+vim-addon-manager install go-syntax
+
 # Create a backup directory for vim
 mkdir -p ~/.backup/vim/swap
 # Create the colors directory for vim
