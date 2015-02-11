@@ -99,6 +99,7 @@ set statusline+=\ %P                           " percent through file
 set t_Co=16
 "set t_Co=16
 "let g:solarized_visibility="high"
+let g:solarized_visibility="low"
 "let g:solarized_contrast="high"
 "let g:solarized_termtrans = 1
 "let g:solarized_termcolors=256
