@@ -26,6 +26,7 @@ function gacp() {
 
 alias ga='git add'
 alias gd='git diff'
+alias gl='git log'
 alias gls='git logshort'
 alias gpr='git pull --rebase'
 alias gspr='git stash && git pull --rebase && git stash pop'
@@ -47,3 +48,5 @@ alias diff='colordiff'
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
 alias vim='vim -O'
+
+alias tmux='TERM=screen-256color-bce tmux'

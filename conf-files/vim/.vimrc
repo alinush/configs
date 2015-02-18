@@ -97,6 +97,7 @@ set statusline+=\ %P                           " percent through file
 
 " Set 256 color terminal (else colors may be very off)
 set t_Co=16
+"set t_ut=
 "set t_Co=16
 "let g:solarized_visibility="high"
 let g:solarized_visibility="low"
@@ -133,7 +134,8 @@ set number
 set ruler
 
 " Enable mouse input
-set mouse=v
+"set mouse=v    " can select, right click and copy
+set mouse=a     " must hold Shift, to select, right click and copy
 set mousemodel=popup
 set selectmode=mouse
 
@@ -271,3 +273,11 @@ au BufRead,BufNewFile *.txt set tw=80 fo+=t
 
 ":autocmd BufWritePost *.tex
 "\   silent execute '!texi2pdf <afile> >/dev/null'
+
+if &term =~ '^screen'
+    " tmux will send xterm-style keys when its xterm-keys option is on
+    execute "set <xUp>=\e[1;*A"
+    execute "set <xDown>=\e[1;*B"
+    execute "set <xRight>=\e[1;*C"
+    execute "set <xLeft>=\e[1;*D"
+endif
