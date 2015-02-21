@@ -148,6 +148,7 @@ set noswapfile
 
 " Syntax highlighting
 syntax on
+set title
 
 " Indentation
 set autoindent
