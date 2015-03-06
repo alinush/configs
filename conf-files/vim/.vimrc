@@ -263,12 +263,12 @@ let g:vim_markdown_folding_disabled=1
 " different that its containing directory, HTML file
 " is saved in the current working directory, not next
 " to the .md file as it should.
-":autocmd BufWritePost *.md
-"\   silent execute '!markdown "<afile>" >"'.
-"\   expand('<afile>:t:r').'".html'
 :autocmd BufWritePost *.md
-\   silent execute '!pandoc --mathjax -s -S -f markdown -t html "<afile>" >"'.
+\   silent execute '!markdown "<afile>" >"'.
 \   expand('<afile>:t:r').'".html'
+":autocmd BufWritePost *.md
+"\   silent execute '!pandoc --mathjax -s -S -f markdown -t html "<afile>" >"'.
+"\   expand('<afile>:t:r').'".html'
 
 " Limit line length to 80 characters
 " WARNING: this will NOT auto wrap lines as you type them apparently but can be
