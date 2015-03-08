@@ -38,3 +38,5 @@
     plain = normal
 [pack]
     threads = 2
+[core]
+	editor = vim
