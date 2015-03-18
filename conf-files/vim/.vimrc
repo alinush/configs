@@ -231,6 +231,7 @@ endif
 
 " Show characters past 80th column as errors
 "match ErrorMsg '\%>80v.\+'
+set colorcolumn=80
 
 " Backup and swap file directories
 "set backup
