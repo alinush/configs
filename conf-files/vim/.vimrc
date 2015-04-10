@@ -34,6 +34,12 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'Syntastic'
 " Nice airline-like bar
 Bundle 'bling/vim-airline'
+" LatexSuite
+Plugin 'gerw/vim-latex-suite'
+filetype plugin indent on
+let g:Tex_UseMakefile = 1
+let g:Tex_DefaultTargetFormat = 'pdf'
+
 " Version control plugin
 "Bundle 'mhinz/vim-signify'
 " Git plugin
