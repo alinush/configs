@@ -39,4 +39,4 @@
 [pack]
     threads = 2
 [core]
-	editor = vim
+    editor = vim
