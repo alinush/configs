@@ -221,7 +221,7 @@ au BufLeave $MYVIMRC :source $MYVIMRC
 " Remove trailing whitespace on save
 if !exists("*StripTrailingWhitespace")
   function StripTrailingWhitespace()
-    if !&binary && &filetype != 'diff'
+    if !&binary && &filetype != 'diff' && &filetype != 'mkd'
       normal mz
       normal Hmy
       %s/\s\+$//e
@@ -230,10 +230,6 @@ if !exists("*StripTrailingWhitespace")
     endif
   endfunction
 endif
-"autocmd FileWritePre    * :call StripTrailingWhitespace()
-"autocmd FileAppendPre   * :call StripTrailingWhitespace()
-"autocmd FilterWritePre  * :call StripTrailingWhitespace()
-"autocmd BufWritePre     * :call StripTrailingWhitespace()
 
 " Show characters past 80th column as errors
 "match ErrorMsg '\%>80v.\+'
@@ -258,6 +254,11 @@ au FileType make setlocal noexpandtab
 "au BufRead,BufNewFile *.hpp syntax reset
 "au BufRead,BufNewFile *.cpp syntax reset
 
+autocmd FileWritePre    * :call StripTrailingWhitespace()
+autocmd FileAppendPre   * :call StripTrailingWhitespace()
+autocmd FilterWritePre  * :call StripTrailingWhitespace()
+autocmd BufWritePre     * :call StripTrailingWhitespace()
+
 " Make <Esc><Esc> clear the highlighted search term
 nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc>
 
@@ -270,6 +271,7 @@ let g:vim_markdown_folding_disabled=1
 " different that its containing directory, HTML file
 " is saved in the current working directory, not next
 " to the .md file as it should.
+"autocmd BufNewFile,BufRead *.md,*.mkdn,*.markdown :set filetype=markdown
 :autocmd BufWritePost *.md
 \   silent execute '!markdown "<afile>" >"'.
 \   expand('<afile>:t:r').'".html'
