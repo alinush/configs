@@ -25,3 +25,4 @@ sudo apt-get install -y \
     libtool \
     eclipse \
     eclipse-cdt \
+    python-autopep8 \
