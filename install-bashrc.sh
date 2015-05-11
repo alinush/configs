@@ -32,10 +32,10 @@ ln -s $scriptdir/conf-files/bash/.bash_aliases ~/.bash_aliases
 # Setup solarized theme
 (
     cd /tmp
-    
+
     # Use -S here not -s, because -s apparently suceeds on some
     # configurations even when the package is not installed
-    if dpkg -S gnome-terminal &>/dev/null; then
+    if [ -n "`dpkg -l | grep gnome-terminal`" ]; then
         git clone https://github.com/Anthony25/gnome-terminal-colors-solarized.git
         (
             cd gnome-terminal-colors-solarized/
