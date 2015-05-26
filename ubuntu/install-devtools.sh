@@ -23,6 +23,4 @@ sudo apt-get install -y \
     ngrep \
     tcpflow \
     libtool \
-    eclipse \
-    eclipse-cdt \
     python-autopep8 \
