@@ -26,4 +26,5 @@ sudo apt-get install -y vim \
     colordiff \
     dos2unix \
     recoll \
-
+    jhead \
+    exiftool \
