@@ -24,3 +24,5 @@ sudo apt-get install -y \
     tcpflow \
     libtool \
     python-autopep8 \
+    golang \
+    golang-go.tools
