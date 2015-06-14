@@ -25,4 +25,4 @@ sudo apt-get install -y \
     libtool \
     python-autopep8 \
     golang \
-    golang-go.tools
+    golang-go.tools \

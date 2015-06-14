@@ -28,3 +28,4 @@ sudo apt-get install -y vim \
     recoll \
     jhead \
     exiftool \
+    youtube-dl \
