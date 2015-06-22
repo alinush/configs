@@ -13,6 +13,3 @@ sudo apt-get install -y vim \
     markdown \
     colordiff \
     dos2unix \
-    jhead \
-    exiftool \
-    youtube-dl \
