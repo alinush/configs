@@ -24,7 +24,7 @@ function gacp() {
     git push || return 1
 }
 
-alias lh='ls -lh'
+alias ll='ls -lh'
 
 alias ga='git add'
 alias gd='git diff'

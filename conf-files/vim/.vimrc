@@ -257,10 +257,14 @@ au BufRead,BufNewFile Vagrantfile setlocal expandtab shiftwidth=2 tabstop=2 soft
 "au BufRead,BufNewFile *.hpp syntax reset
 "au BufRead,BufNewFile *.cpp syntax reset
 
-autocmd FileWritePre    * :call StripTrailingWhitespace()
-autocmd FileAppendPre   * :call StripTrailingWhitespace()
-autocmd FilterWritePre  * :call StripTrailingWhitespace()
-autocmd BufWritePre     * :call StripTrailingWhitespace()
+"NOTE: This setting is not a good idea when working with repositories. Most times
+"editing a single line in a file will result in a huge amount of other lines
+"being changed as a result of the trailing whitespace striping. This will pollute
+"your diffs and make you crazy. Don't do it.
+"autocmd FileWritePre    * :call StripTrailingWhitespace()
+"autocmd FileAppendPre   * :call StripTrailingWhitespace()
+"autocmd FilterWritePre  * :call StripTrailingWhitespace()
+"autocmd BufWritePre     * :call StripTrailingWhitespace()
 
 " Make <Esc><Esc> clear the highlighted search term
 nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc>
