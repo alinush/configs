@@ -122,6 +122,11 @@ colorscheme solarized
 " Other VIM settings
 " ==================
 "
+set viminfo='20,<1000,s1000 "allows you to yank more than 50 lines (really Vim??)
+" When reopening a file remember the position where it was closed
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
 set exrc            " enable per-directory .vimrc files
 set secure          " disable unsafe commands in local .vimrc files
 
