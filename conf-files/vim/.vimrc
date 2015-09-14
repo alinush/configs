@@ -74,7 +74,7 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline_powerline_fonts = 1
 
 " Disable hunks, whatever they are, as they seem to be causing problems
-let g:airline_enable_hunks = 0
+let g:airline#extensions#hunks#enabled = 0
 
 " Fancy pants status line
 set laststatus=2
