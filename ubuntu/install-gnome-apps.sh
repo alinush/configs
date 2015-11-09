@@ -14,3 +14,4 @@ sudo apt-get install -y \
     compiz-plugins \
     compiz-plugins-extra \
     recoll \
+    sni-qt:i386 \
