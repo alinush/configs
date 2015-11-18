@@ -34,6 +34,7 @@ alias gpr='git pull --rebase'
 alias gspr='git stash && git pull --rebase && git stash pop'
 alias gst='git status'
 alias gsu='git submodule update'
+alias gsh='git show'
 alias gcp='git cherry-pick'
 
 alias agi='sudo apt-get install'
