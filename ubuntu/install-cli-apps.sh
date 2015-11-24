@@ -13,3 +13,5 @@ sudo apt-get install -y vim \
     markdown \
     colordiff \
     dos2unix \
+    p7zip \
+    p7zip-full
