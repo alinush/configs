@@ -37,25 +37,25 @@ minutes_since_last_commit() {
 txtred="\[\033[31m\]"
 txtgrn="\[\033[32m\]"
 txtylw="\[\033[33m\]"
-git_prompt() {
-    if [[ GIT_COMPLETION -eq 1 ]]; then
-        local g="$(__gitdir)"
-        if [ -n "$g" ]; then
-            local MINUTES_SINCE_LAST_COMMIT=`minutes_since_last_commit`
-            if [ "$MINUTES_SINCE_LAST_COMMIT" -gt 30 ]; then
-                local COLOR=${txtred}
-            elif [ "$MINUTES_SINCE_LAST_COMMIT" -gt 10 ]; then
-                local COLOR=${txtylw}
-            else
-                local COLOR=${txtgrn}
-            fi
-            local SINCE_LAST_COMMIT="${COLOR}$(minutes_since_last_commit)m${txtgrn}"
-            # __git_ps1 is from the Git source tree's contrib/completion/git-completion.bash
-            local GIT_PROMPT=`__git_ps1 "(%s|${SINCE_LAST_COMMIT})"`
-            echo ${GIT_PROMPT}
-        fi
-    fi
-}
+#git_prompt() {
+#    if [[ GIT_COMPLETION -eq 1 ]]; then
+#        local g="$(__gitdir)"
+#        if [ -n "$g" ]; then
+#            local MINUTES_SINCE_LAST_COMMIT=`minutes_since_last_commit`
+#            if [ "$MINUTES_SINCE_LAST_COMMIT" -gt 30 ]; then
+#                local COLOR=${txtred}
+#            elif [ "$MINUTES_SINCE_LAST_COMMIT" -gt 10 ]; then
+#                local COLOR=${txtylw}
+#            else
+#                local COLOR=${txtgrn}
+#            fi
+#            local SINCE_LAST_COMMIT="${COLOR}$(minutes_since_last_commit)m${txtgrn}"
+#            # __git_ps1 is from the Git source tree's contrib/completion/git-completion.bash
+#            local GIT_PROMPT=`__git_ps1 "(%s|${SINCE_LAST_COMMIT})"`
+#            echo ${GIT_PROMPT}
+#        fi
+#    fi
+#}
 
 # Called after every command to update prompt
 #update_prompt() {
