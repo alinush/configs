@@ -15,4 +15,5 @@ sudo apt-get install -y vim \
     dos2unix \
     p7zip \
     p7zip-full \
-    bikeshed
+    bikeshed \
+    md5deep \
