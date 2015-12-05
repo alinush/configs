@@ -26,3 +26,6 @@ sudo apt-get install -y \
     python-autopep8 \
     golang \
     golang-go.tools \
+    python-pip \
+
+sudo pip install click
