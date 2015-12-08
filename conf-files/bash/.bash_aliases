@@ -27,6 +27,7 @@ function gacp() {
 alias ll='ls -lh'
 
 alias ga='git add'
+alias gc='git clone'
 alias gd='git diff'
 alias gl='git log'
 alias gls='git logshort'
