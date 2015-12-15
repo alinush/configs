@@ -32,3 +32,4 @@ sudo apt-get install -y \
     texlive-publishers \
     texlive-humanities \
     mscgen \
+    inkscape \
