@@ -3,3 +3,4 @@ sudo apt-get install -y \
     exiftool \
     youtube-dl \
     findimagedupes \
+    ufraw-batch \
