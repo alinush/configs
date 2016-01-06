@@ -1,3 +1,5 @@
+OS_FLAVOR="Unknown"
+
 if [ "$(uname -s)" = "Darwin" ]; then
     OS="OS X"
 elif [ "$(uname -s)" = "Linux" ]; then
@@ -6,13 +8,9 @@ elif [ "$(uname -s)" = "Linux" ]; then
     if [ -f /etc/issue ]; then
         if grep Fedora /etc/issue >/dev/null; then
     	    OS_FLAVOR="Fedora"
-        fi
-    elif [ -f /etc/lsb-release ]; then
-	if grep "DISTRIB_ID=Ubuntu" /etc/lsb-release >/dev/null; then
+        elif grep Ubuntu /etc/issue >/dev/null; then
             OS_FLAVOR="Ubuntu"
         fi
-    else
-        OS_FLAVOR="Unknown"
     fi
 fi
 
