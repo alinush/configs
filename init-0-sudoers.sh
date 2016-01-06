@@ -9,6 +9,7 @@ echo "Setting yourself ($me) as a sudoer..."
 echo
 
 if [ ! -f $file ]; then
+    mkdir -p "$(dirname $file)"
     sudo touch $file
     sudo chmod 0440 $file
     sudo sh -c "echo \"$me	ALL=(ALL)	NOPASSWD: ALL\" >$file"
