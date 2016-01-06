@@ -1,27 +1,18 @@
 set -e
-scriptdir=$(readlink -f $(dirname $0))
+#scriptdir=$(readlink -f $(dirname $0))
+scriptdir=$( cd $(dirname $0) ; pwd -P )
+
+. $scriptdir/shlibs/os.sh
 
 cd /tmp
 
-#
-# Moved this to .vimrc
-#
-#if [ -f /etc/issue ] ; then
-#    if cat /etc/issue | grep Ubuntu >/dev/null; then
-#        echo
-#        echo "Detected Ubuntu in /etc/issue"
-#        echo
-#        sudo apt-get install -y vim-addon-manager markdown
-#        git clone https://github.com/plasticboy/vim-markdown.git
-#        cd vim-markdown
-#        sudo make install
-#        vim-addon-manager install mkd
-#    fi
-#fi
+if [ "$OS" = "Linux" -a "$OS_FLAVOR" = "Ubuntu" ]; then
+    sudo apt-get install vim-gocomplete
+    vim-addon-manager install gocode
+    vim-addon-manager install go-syntax
 
-sudo apt-get install vim-gocomplete
-vim-addon-manager install gocode
-vim-addon-manager install go-syntax
+    # TODO: Handle Mac OSX
+fi
 
 # Create a backup directory for vim
 mkdir -p ~/.backup/vim/swap

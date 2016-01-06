@@ -6,8 +6,16 @@ GIT_PS1_SHOWSTASHSTATE=1
 GIT_PS1_SHOWUNTRACKEDFILES=1
 # GIT_PS1_SHOWUPSTREAM="auto"
 GIT_COMPLETION=0
+
+# Mac OS X
+if [ `uname` == 'Darwin' ] && [ `which brew` ]; then
+    if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ] && [ -f `brew --prefix`/etc/bash_completion.d/git-prompt.sh ]; then
+        . `brew --prefix`/etc/bash_completion.d/git-completion.bash
+        . `brew --prefix`/etc/bash_completion.d/git-prompt.sh
+        GIT_COMPLETION=1
+    fi
 # Ubuntu 14.04 w/ Git 1.9.1
-if [ -f /etc/bash_completion.d/git-prompt ]; then
+elif [ -f /etc/bash_completion.d/git-prompt ]; then
     . /usr/share/bash-completion/completions/gitk
     . /etc/bash_completion.d/git-prompt
     GIT_COMPLETION=1

@@ -1,5 +1,6 @@
 set -e 
-scriptdir=$(readlink -f $(dirname $0))
+scriptdir=$( cd $(dirname $0) ; pwd -P )
 
-sudo apt-get install grc
+[ "$OS" = "Linux" -a "$OS_FLAVOR" = "Ubuntu" ] && sudo apt-get install grc
+
 ln -s $scriptdir/conf-files/grc ~/.grc
