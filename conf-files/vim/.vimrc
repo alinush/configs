@@ -226,7 +226,7 @@ au BufLeave $MYVIMRC :source $MYVIMRC
 " Remove trailing whitespace on save
 if !exists("*StripTrailingWhitespace")
   function StripTrailingWhitespace()
-    if !&binary && &filetype != 'diff' && &filetype != 'mkd'
+    if !&binary && &filetype != 'diff' && &filetype != 'markdown'
       normal mz
       normal Hmy
       %s/\s\+$//e
@@ -251,7 +251,8 @@ endif
 au FileType tex set textwidth=80
 au FileType html setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 au FileType javascript setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
-au BufRead,BufNewFile *.md set filetype=mkd
+"au BufRead,BufNewFile *.md set filetype=mkd
+au BufRead,BufNewFile *.md set filetype=markdown
 au BufRead,BufNewFile *.go set filetype=go
 au FileType make setlocal noexpandtab
 au BufRead,BufNewFile Vagrantfile setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
