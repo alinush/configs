@@ -6,4 +6,6 @@ brew install bash-completion \
     grc \
     colordiff \
     wget \
-    htop
+    htop \
+    youtube-dl \
+    ffmpeg
