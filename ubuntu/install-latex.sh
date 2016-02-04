@@ -33,3 +33,4 @@ sudo apt-get install -y \
     texlive-humanities \
     mscgen \
     inkscape \
+    texstudio \
