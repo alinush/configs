@@ -27,7 +27,7 @@ Plugin 'gmarik/Vundle.vim'
 " PLUGINS:
 " Markdown syntax highlighter
 Bundle 'godlygeek/tabular'
-Bundle 'plasticboy/vim-markdown'
+"Bundle 'plasticboy/vim-markdown'
 " A nice color scheme
 Bundle 'altercation/vim-colors-solarized'
 " Syntax checker
@@ -36,6 +36,8 @@ Bundle 'Syntastic'
 Bundle 'bling/vim-airline'
 " LatexSuite
 Plugin 'gerw/vim-latex-suite'
+Plugin 'vim-pandoc/vim-pandoc'
+Plugin 'vim-pandoc/vim-pandoc-syntax'
 filetype plugin indent on
 let g:Tex_UseMakefile = 1
 let g:Tex_DefaultTargetFormat = 'pdf'
