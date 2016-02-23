@@ -281,6 +281,7 @@ nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc>
 noremap <F12> <Esc>:syntax sync fromstart<CR>
 
 let g:vim_markdown_folding_disabled=1
+let g:pandoc#modules#disabled = ["folding"]
 " Auto-build Markdown files to HTML
 " TODO: fix bug when editing a file from a directory
 " different that its containing directory, HTML file
