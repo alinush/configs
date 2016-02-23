@@ -253,6 +253,7 @@ endif
 au FileType tex set textwidth=80
 au FileType html setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 au FileType javascript setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
+au BufRead,BufNewFile *.proto set nospell
 "au BufRead,BufNewFile *.md set filetype=mkd
 au BufRead,BufNewFile *.md set filetype=markdown
 au BufRead,BufNewFile *.go set filetype=go
