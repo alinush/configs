@@ -18,3 +18,4 @@ sudo apt-get install -y vim \
     bikeshed \
     md5deep \
     cpufreq \
+    tree \
