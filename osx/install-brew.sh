@@ -8,4 +8,5 @@ brew install bash-completion \
     wget \
     htop \
     youtube-dl \
-    ffmpeg
+    ffmpeg \
+    vim \
