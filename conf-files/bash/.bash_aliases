@@ -42,6 +42,7 @@ alias agi='sudo apt-get install'
 alias agr='sudo apt-get remove'
 alias agu='sudo apt-get update'
 alias ag='sudo apt-get'
+alias agdu='agu && ag -y dist-upgrade'
 alias acs='sudo apt-cache search'
 
 alias yr='sudo yum remove'
