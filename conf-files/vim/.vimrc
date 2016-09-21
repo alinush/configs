@@ -38,6 +38,7 @@ Bundle 'bling/vim-airline'
 Plugin 'gerw/vim-latex-suite'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
+Plugin 'fatih/vim-go'
 filetype plugin indent on
 let g:Tex_UseMakefile = 1
 let g:Tex_DefaultTargetFormat = 'pdf'

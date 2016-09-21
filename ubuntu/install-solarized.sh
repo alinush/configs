@@ -14,7 +14,7 @@ scriptdir=$(readlink -f $(dirname $0))
         git clone https://github.com/Anthony25/gnome-terminal-colors-solarized.git
         (
             cd gnome-terminal-colors-solarized/
-            ./install.sh -s dark -p Default
+            ./install.sh -s dark
         )
     fi
 

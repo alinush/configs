@@ -26,7 +26,6 @@ sudo apt-get install -y \
     texlive-pstricks-doc \
     texlive-metapost \
     texlive-latex-extra \
-    texlive-doc-en \
     texlive-fonts-extra \
     texlive-science \
     texlive-publishers \

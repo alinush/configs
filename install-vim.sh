@@ -7,11 +7,7 @@ scriptdir=$( cd $(dirname $0) ; pwd -P )
 cd /tmp
 
 if [ "$OS" = "Linux" -a "$OS_FLAVOR" = "Ubuntu" ]; then
-    sudo apt-get install vim-gocomplete
-    vim-addon-manager install gocode
-    vim-addon-manager install go-syntax
-
-    # TODO: Handle Mac OSX
+    :
 fi
 
 # Create a backup directory for vim

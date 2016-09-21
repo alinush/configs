@@ -17,5 +17,5 @@ sudo apt-get install -y vim \
     p7zip-full \
     bikeshed \
     md5deep \
-    cpufreq \
+    indicator-cpufreq \
     tree \

@@ -9,7 +9,6 @@ sudo apt-get install -y \
     gedit-plugins \
     vlc \
     indicator-cpufreq \
-    gpointing-device-settings \
     compizconfig-settings-manager \
     compiz-plugins \
     compiz-plugins-extra \
