@@ -28,7 +28,12 @@ fi
 # Setup .bash_aliases
 [ -f ~/.bash_aliases ] && mv ~/.bash_aliases ~/.bash_aliases.`date +%s`
 [ -L ~/.bash_aliases ] && mv ~/.bash_aliases ~/.bash_aliases.`date +%s`
-ln -s $scriptdir/conf-files/bash/.bash_aliases ~/.bash_aliases
+ln -s $confdir/.bash_aliases ~/.bash_aliases
+
+# sha256sum alias for OSX
+if [ "$OS" = "OSX" ]; then
+    echo "alias sha256sum='shasum -a 256'" >~/.bashrc
+fi
 
 if [ "$OS" = "Linux" ]; then
     # Setup history, less, dircolors, grc aliases and the bash prompt
