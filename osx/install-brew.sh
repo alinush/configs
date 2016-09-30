@@ -10,3 +10,4 @@ brew install bash-completion \
     youtube-dl \
     ffmpeg \
     vim \
+    gnu-sed \
