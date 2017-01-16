@@ -27,5 +27,6 @@ sudo apt-get install -y \
     golang \
     golang-go.tools \
     python-pip \
+    openjdk-9-jre-headless \
 
 sudo -H pip install click
