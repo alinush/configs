@@ -28,4 +28,4 @@ sudo apt-get install -y \
     golang-go.tools \
     python-pip \
 
-sudo pip install click
+sudo -H pip install click
