@@ -28,5 +28,6 @@ sudo apt-get install -y \
     golang-go.tools \
     python-pip \
     openjdk-9-jre-headless \
+    python-matplotlib \
 
 sudo -H pip install click
