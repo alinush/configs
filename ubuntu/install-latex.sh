@@ -34,3 +34,5 @@ sudo apt-get install -y \
     mscgen \
     inkscape \
     texstudio \
+    latexdiff \
+
