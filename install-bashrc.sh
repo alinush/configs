@@ -21,8 +21,8 @@ fi
 if [ "$OS" = "OSX" ]; then
     echo " . /etc/bashrc" >> $bashrc
     echo "[ -f ~/.bash_aliases ] && . ~/.bash_aliases" >> $bashrc
-    # Create ~/.profile which sources .bashrc 
-    echo ". ~/.bashrc" >>~/.profile
+    [ -f ~/.profile ] && mv ~/.profile ~/.profile.`date +%s`
+    ln -s "$scriptdir/conf-files/osx/.profile" ~/.profile
 fi 
 
 # Setup .bash_aliases

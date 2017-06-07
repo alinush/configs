@@ -14,5 +14,5 @@ elif [ "$(uname -s)" = "Linux" ]; then
     fi
 fi
 
-#echo "OS: $OS"
-#echo "OS Flavor: $OS_FLAVOR"
+echo "OS: $OS"
+echo "OS Flavor: $OS_FLAVOR"
