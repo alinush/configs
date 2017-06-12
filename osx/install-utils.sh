@@ -11,3 +11,4 @@ brew install bash-completion \
     gnu-sed \
     gawk \
     markdown \
+    pandoc \
