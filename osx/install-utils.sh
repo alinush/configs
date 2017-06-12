@@ -10,3 +10,4 @@ brew install bash-completion \
     vim \
     gnu-sed \
     gawk \
+    markdown \
