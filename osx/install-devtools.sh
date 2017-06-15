@@ -9,3 +9,5 @@ if ! which pip; then
 fi
 
 sudo pip install click
+
+brew install gdb
