@@ -10,4 +10,6 @@ fi
 
 sudo pip install click
 
-brew install gdb
+brew install gdb \
+    six \
+    gmp \
