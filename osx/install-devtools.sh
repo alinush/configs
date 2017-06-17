@@ -13,3 +13,4 @@ sudo pip install click
 brew install gdb \
     six \
     gmp \
+    cmake \
