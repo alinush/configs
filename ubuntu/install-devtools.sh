@@ -3,6 +3,7 @@ sudo apt-get install -y \
     bzr \
     bzr-builddeb \
     cdbs \
+    cmake \
     debhelper \
     devscripts \
     dh-make \
