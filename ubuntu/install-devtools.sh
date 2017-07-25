@@ -32,5 +32,3 @@ sudo apt-get install -y \
     openjdk-9-jdk-headless \
     maven \
     python-matplotlib \
-
-sudo -H pip install click

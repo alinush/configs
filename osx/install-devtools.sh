@@ -8,8 +8,6 @@ if ! which pip; then
     sudo ./get-pip.py
 fi
 
-sudo pip install click
-
 brew install gdb \
     six \
     gmp \
