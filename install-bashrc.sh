@@ -47,3 +47,7 @@ fi
 echo ". $confdir/setup-grc-aliases.sh"  >> $bashrc
 echo ". $confdir/setup-bash-prompt.sh"  >> $bashrc
 echo ". $confdir/setup-dircolors.sh"    >> $bashrc
+
+echo
+echo "All done!"
+echo

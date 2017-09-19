@@ -21,3 +21,7 @@ ln -s $scriptdir/conf-files/vim/.vimrc ~/.vimrc
 
 # Add monokai color scheme
 cp $scriptdir/conf-files/vim/monokai.vim ~/.vim/colors
+
+echo
+echo "All done!"
+echo

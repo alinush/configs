@@ -19,3 +19,7 @@ fi
 
 [ -f ~/.gitconfig ] && mv ~/.gitconfig ~/.gitconfig.`date +%s`
 ln -s $scriptdir/conf-files/$conffile ~/.gitconfig
+
+echo
+echo "All done!"
+echo
