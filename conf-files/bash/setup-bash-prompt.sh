@@ -99,6 +99,7 @@ txtylw="\[\033[33m\]"
 update_prompt()
 {
     export PS1="\[\033[00;32m\]\u@\h [${txtylw}\w${txtgrn}]\[\033[01;33m\]$(__git_ps1)\[\033[01;34m\] \$\[\033[00m\] "
+    echo -ne "\033]0;${PWD}\007"
 }
 
 PROMPT_COMMAND=update_prompt
