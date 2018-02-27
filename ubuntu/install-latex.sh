@@ -18,6 +18,7 @@ sudo apt-get install -y \
     texlive-fonts-recommended \
     texlive-fonts-recommended-doc \
     texlive-generic-recommended \
+    texlive-generic-extra \
     texlive-lang-german \
     texlive-latex-base \
     texlive-latex-base-doc \
