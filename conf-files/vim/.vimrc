@@ -258,6 +258,7 @@ au BufRead,BufNewFile *.proto set nospell
 "au BufRead,BufNewFile *.md set filetype=mkd
 au BufRead,BufNewFile *.md set filetype=markdown
 au BufRead,BufNewFile *.go set filetype=go
+au BufEnter *.tpp :setlocal filetype=cpp
 au FileType make setlocal noexpandtab
 au BufRead,BufNewFile Vagrantfile setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 "au BufRead,BufNewFile *.py setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
