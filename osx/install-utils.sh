@@ -6,9 +6,10 @@ brew install bash-completion \
     wget \
     htop \
     youtube-dl \
-    ffmpeg \
     vim \
     gnu-sed \
     gawk \
     markdown \
     pandoc \
+
+brew install ffmpeg --with-libvpx
