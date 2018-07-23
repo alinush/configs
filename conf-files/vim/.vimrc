@@ -258,15 +258,16 @@ au BufRead,BufNewFile *.proto set nospell
 "au BufRead,BufNewFile *.md set filetype=mkd
 au BufRead,BufNewFile *.md set filetype=markdown
 au BufRead,BufNewFile *.go set filetype=go
-au BufEnter *.tpp :setlocal filetype=cpp
+au BufEnter *.tpp :setlocal filetype=cpp autoindent
+au BufEnter *.tcc :setlocal filetype=cpp autoindent
+au BufRead,BufNewFile *.hpp set filetype=cpp autoindent
+au BufRead,BufNewFile *.h set filetype=cpp autoindent
+au BufRead,BufNewFile *.cpp set filetype=cpp autoindent
 au FileType make setlocal noexpandtab
 au BufRead,BufNewFile Vagrantfile setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 "au BufRead,BufNewFile *.py setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 "au FileType python setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 
-"au BufRead,BufNewFile *.hpp set filetype=cpp
-"au BufRead,BufNewFile *.hpp syntax reset
-"au BufRead,BufNewFile *.cpp syntax reset
 
 "NOTE: This setting is not a good idea when working with repositories. Most times
 "editing a single line in a file will result in a huge amount of other lines
