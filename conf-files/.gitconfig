@@ -5,6 +5,7 @@
     color = true
 [alias]
     st = status
+    tagcommit = rev-list -n 1
     logshort = log --decorate --pretty=oneline
     loglong = log --graph --stat --decorate=short
     sdiff = ! git diff && git submodule foreach 'git diff'

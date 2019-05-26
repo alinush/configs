@@ -11,5 +11,6 @@ brew install bash-completion \
     gawk \
     markdown \
     pandoc \
+    asciidoc \
 
 brew install ffmpeg --with-libvpx
