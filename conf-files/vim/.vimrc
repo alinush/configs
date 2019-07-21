@@ -31,7 +31,7 @@ Bundle 'godlygeek/tabular'
 " A nice color scheme
 Bundle 'altercation/vim-colors-solarized'
 " Syntax checker
-Bundle 'Syntastic'
+"Bundle 'Syntastic'
 " Nice airline-like bar
 Bundle 'bling/vim-airline'
 " LatexSuite
