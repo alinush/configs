@@ -61,3 +61,5 @@ alias vim='vim -O'
 alias rst='repo-status.py'
 alias ru='repo-update.py'
 alias rc='repo-clone.py'
+
+alias td='todo.sh ls'
