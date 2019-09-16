@@ -100,6 +100,12 @@ update_prompt()
 {
     export PS1="\[\033[00;32m\]\u@\h [${txtylw}\w${txtgrn}]\[\033[01;33m\]$(__git_ps1)\[\033[01;34m\] \$\[\033[00m\] "
     echo -ne "\033]0;${PWD}\007"
+    printf "\e]2;$tab_title_idkif_this_var_might_get_overwritten\a"
 }
 
 PROMPT_COMMAND=update_prompt
+
+titletab()
+{
+    tab_title_idkif_this_var_might_get_overwritten="$*"
+}
