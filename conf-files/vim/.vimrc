@@ -292,9 +292,10 @@ let g:pandoc#modules#disabled = ["folding"]
 " is saved in the current working directory, not next
 " to the .md file as it should.
 "autocmd BufNewFile,BufRead *.md,*.mkdn,*.markdown :set filetype=markdown
-:autocmd BufWritePost *.md
-\   silent execute '!markdown "<afile>" >"'.
-\   expand('<afile>:t:r').'".html'
+":autocmd BufWritePost *.md
+"\   silent execute '!markdown "<afile>" >"'.
+"\   expand('<afile>:t:r').'".html'
+
 ":autocmd BufWritePost *.md
 "\   silent execute '!pandoc --mathjax -s -S -f markdown -t html "<afile>" >"'.
 "\   expand('<afile>:t:r').'".html'
