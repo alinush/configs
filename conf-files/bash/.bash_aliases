@@ -57,7 +57,6 @@ alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
 alias vim='vim -O'
 
-#alias tmux='TERM=screen-256color-bce tmux'
 alias rst='repo-status.py'
 alias ru='repo-update.py'
 alias rc='repo-clone.py'
