@@ -62,6 +62,7 @@ alias ru='repo-update.py'
 alias rc='repo-clone.py'
 
 alias td='todo.sh -nt'
+alias tdd='td do'
 alias tdl='td ls'
 alias tdr='td rm'
 alias ccat='pygmentize -g -O style=colorful,linenos=1'
