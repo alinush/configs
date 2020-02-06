@@ -1,4 +1,5 @@
 brew install bash-completion \
+    wget \
     coreutils \
     git \
     grc \
@@ -13,4 +14,5 @@ brew install bash-completion \
     pandoc \
     asciidoc \
 
-brew install ffmpeg --with-libvpx
+brew install ffmpeg
+# TODO: --with-libvpx no longer works
