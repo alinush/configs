@@ -62,6 +62,7 @@ alias ru='repo-update.py'
 alias rc='repo-clone.py'
 
 alias td='todo.sh -nt'
+alias tdo='vim ~/todo.txt'
 alias tdd='td do'
 alias tdl='td ls'
 alias tdr='td rm'
