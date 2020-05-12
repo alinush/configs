@@ -257,6 +257,8 @@ au FileType javascript setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 au BufRead,BufNewFile *.proto set nospell
 "au BufRead,BufNewFile *.md set filetype=mkd
 au BufRead,BufNewFile *.md set filetype=markdown
+au BufRead,BufNewFile *.marp set filetype=markdown
+au BufRead,BufNewFile *.marp set syntax=pandoc
 au BufRead,BufNewFile *.go set filetype=go
 au BufEnter *.tpp :setlocal filetype=cpp autoindent
 au BufEnter *.tcc :setlocal filetype=cpp autoindent
@@ -299,6 +301,9 @@ let g:pandoc#modules#disabled = ["folding"]
 ":autocmd BufWritePost *.md
 "\   silent execute '!pandoc --mathjax -s -S -f markdown -t html "<afile>" >"'.
 "\   expand('<afile>:t:r').'".html'
+
+:autocmd BufWritePost *.marp
+\ silent execute '!marp "<afile>" 2>/dev/null >/dev/null'
 
 " Limit line length to 80 characters
 " WARNING: this will NOT auto wrap lines as you type them apparently but can be
