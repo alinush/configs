@@ -13,3 +13,5 @@ if [ -f ~/.brew_github_api_token ]; then
 fi
 
 . ~/.bashrc
+
+export PATH="$HOME/.cargo/bin:$PATH"
