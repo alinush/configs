@@ -26,6 +26,7 @@ Plugin 'gmarik/Vundle.vim'
 
 " PLUGINS:
 " Markdown syntax highlighter
+Bundle 'mlr-msft/vim-loves-dafny'
 Bundle 'godlygeek/tabular'
 "Bundle 'plasticboy/vim-markdown'
 " A nice color scheme
@@ -251,6 +252,7 @@ endif
 "set backupdir=~/.backup/vim
 "set directory=~/.backup/vim/swap
 
+au FileType dafny setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 au FileType tex set textwidth=80
 au FileType html setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 au FileType javascript setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
