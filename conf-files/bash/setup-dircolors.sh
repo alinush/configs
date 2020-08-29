@@ -1,4 +1,7 @@
 #export TERM='xterm-256color'
 #export TERM='xterm-color'
 
-eval `dircolors --bourne-shell ~/.dircolors`
+dc_cmd=dircolors
+which $dc_cmd || dc_cmd=gdircolors
+
+eval `$dc_cmd --bourne-shell ~/.dircolors`
