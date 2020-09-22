@@ -254,6 +254,7 @@ endif
 
 au FileType dafny setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 au FileType tex set textwidth=80
+au FileType tex setlocal foldlevel=999  " prevents automatic folding of subsections when you open .tex files
 au FileType html setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 au FileType javascript setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 au BufRead,BufNewFile *.proto set nospell
