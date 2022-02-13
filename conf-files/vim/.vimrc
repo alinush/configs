@@ -186,6 +186,7 @@ set ffs=unix
 
 " Spell checker
 set spell
+hi SpellBad cterm=underline
 
 " Make backspace act normal
 set backspace=eol,start,indent
