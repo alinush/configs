@@ -12,6 +12,7 @@ if [ -f ~/.brew_github_api_token ]; then
     . ~/.brew_github_api_token
 fi
 
+. ~/.bash_aliases
 . ~/.bashrc
 
 export PATH="$HOME/.cargo/bin:$PATH"
