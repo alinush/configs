@@ -28,7 +28,7 @@ Plugin 'gmarik/Vundle.vim'
 " Markdown syntax highlighter
 Bundle 'mlr-msft/vim-loves-dafny'
 Bundle 'godlygeek/tabular'
-"Bundle 'plasticboy/vim-markdown'
+" Bundle 'plasticboy/vim-markdown'
 " A nice color scheme
 Bundle 'altercation/vim-colors-solarized'
 " Syntax checker
@@ -260,9 +260,10 @@ au FileType html setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 au FileType javascript setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 au BufRead,BufNewFile *.proto set nospell
 "au BufRead,BufNewFile *.md set filetype=mkd
-au BufRead,BufNewFile *.md set filetype=markdown
-au BufRead,BufNewFile *.marp set filetype=markdown
-au BufRead,BufNewFile *.marp set syntax=pandoc
+augroup pandoc_syntax
+    au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
+    au! BufNewFile,BufFilePre,BufRead *.marp set filetype=markdown.pandoc
+augroup END
 au BufRead,BufNewFile *.go set filetype=go
 au BufEnter *.tpp :setlocal filetype=cpp autoindent
 au BufEnter *.tcc :setlocal filetype=cpp autoindent
