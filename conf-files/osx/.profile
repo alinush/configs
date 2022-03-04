@@ -17,4 +17,4 @@ fi
 . ~/.bash_aliases
 . ~/.bashrc
 
-export PATH="$HOME/.cargo/bin:$PATH"
+. "$HOME/.cargo/env"
