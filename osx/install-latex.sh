@@ -1,2 +1,2 @@
 brew install Caskroom/cask/mactex
-brew install --cask xquartz inkscape texstudio
+brew install --cask xquartz inkscape texstudio bibutils

@@ -41,3 +41,5 @@
     threads = 2
 [core]
     editor = vim
+[url "https://github"]
+	insteadOf = git://github
