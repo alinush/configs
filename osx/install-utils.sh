@@ -10,7 +10,6 @@ brew install bash-completion \
     gawk \
     markdown \
     pandoc \
+    yt-dlp \
     asciidoc \
-
-brew install ffmpeg
-# TODO: --with-libvpx no longer works
+    ffmpeg \
