@@ -1,6 +1,11 @@
 #!/bin/bash
 
 function gacp() {
+    if [ "$1" = "-m" ]; then
+        echo "ERROR: Did you mean to call 'git commit -m'?"
+        return 1
+    fi
+
     if [ $# -eq 0 ]; then
         echo "ERROR: You need to provided a commit message as a parameter"
         return 1
@@ -18,6 +23,35 @@ function gacp() {
     echo
     echo "Committing with message: \"$@\" ..."
     git commit -m "$*" || return 1
+
+    echo
+    echo "Pushing changes..."
+    git push || return 1
+}
+
+function gacnp() {
+    if [ "$1" = "-m" ]; then
+        echo "ERROR: Did you mean to call 'git commit -m'?"
+        return 1
+    fi
+
+    if [ $# -eq 0 ]; then
+        echo "ERROR: You need to provided a commit message as a parameter"
+        return 1
+    fi
+
+    if [ "$*" = "." ]; then
+        echo "ERROR: A single dot ('.') is not a valid commit message ^_^!"
+        return 1
+    fi
+
+    echo
+    echo "Adding all files in `pwd`..."
+    git add . || return 1
+
+    echo
+    echo "Committing with message: \"$@\" ..."
+    git commit -m "$*" -n || return 1
 
     echo
     echo "Pushing changes..."
@@ -71,3 +105,4 @@ alias tdd='td do'
 alias tdl='td ls'
 alias tdr='td rm'
 alias ccat='pygmentize -g -O style=colorful,linenos=1'
+alias grep-tex='grep --include="*.tex"'

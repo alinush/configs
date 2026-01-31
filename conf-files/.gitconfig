@@ -1,6 +1,6 @@
 [user]
     name = Alin Tomescu
-    email = alinush@mit.edu
+	email = tomescu.alin@gmail.com
 [diff]
     color = true
 [alias]
@@ -11,6 +11,7 @@
     sdiff = ! git diff && git submodule foreach 'git diff'
     spush = push --recurse-submodules=on-demand
     supdate = submodule update --remote --merge
+	uncommit = reset HEAD^
 [push]
     default = simple
 [color]
@@ -43,3 +44,5 @@
     editor = vim
 [url "https://github"]
 	insteadOf = git://github
+[url "git@github.com:"]
+	insteadOf = https://github.com/

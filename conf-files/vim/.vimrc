@@ -40,6 +40,7 @@ Plugin 'gerw/vim-latex-suite'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'fatih/vim-go'
+Plugin 'iden3/vim-circom-syntax'
 filetype plugin indent on
 let g:Tex_UseMakefile = 1
 let g:Tex_DefaultTargetFormat = 'pdf'
@@ -253,6 +254,7 @@ endif
 "set backupdir=~/.backup/vim
 "set directory=~/.backup/vim/swap
 
+au FileType typescript setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 au FileType dafny setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 au FileType tex set textwidth=80
 au FileType tex setlocal foldlevel=999  " prevents automatic folding of subsections when you open .tex files
