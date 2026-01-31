@@ -11,7 +11,10 @@ Works with Ubuntu 16.04 (not necessarily earlier versions).
     
     ./install-git.sh
     ./install-grc.sh
-    ./ubuntu/install-cli-apps.sh
+
+    # One of:
+    ./osx/install-utils.sh
+    #./ubuntu/install-cli-apps.sh
     
     ./install-bashrc.sh
     ./install-vim.sh

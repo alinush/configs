@@ -1,12 +1,10 @@
 brew install bash-completion \
     wget \
     coreutils \
-    git \
     grc \
     colordiff \
     wget \
     htop \
-    youtube-dl \
     vim \
     gnu-sed \
     gawk \
