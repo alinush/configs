@@ -105,4 +105,10 @@ alias tdd='td do'
 alias tdl='td ls'
 alias tdr='td rm'
 alias ccat='pygmentize -g -O style=colorful,linenos=1'
+
 alias grep-tex='grep --include="*.tex"'
+alias grep-apt='grep --exclude-dir=cached-packages --exclude-dir=build --exclude-dir=node_modules --exclude-dir=target --exclude-dir=.git --exclude="*.svg" --exclude-dir=".idea" --exclude=*.fun_data --exclude=*.md --exclude-dir=.venv'
+alias grep-sdk='grep-aptos --exclude-dir=dist --exclude-dir=docs --exclude-dir=node_modules --exclude="*.html"'
+alias grep-move='grep-aptos --include="*.move"'
+alias grep-toml='grep-aptos --include="*.toml"'
+
