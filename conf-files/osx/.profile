@@ -19,41 +19,9 @@ fi
 
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$PATH:$HOME/repos/ck"
+export PATH="$PATH:$HOME/repos/rpt"
 export PATH="$PATH:$HOME/repos/badscripts"
 export PATH="$PATH:$HOME/repos/scripts/src"
-
-aptos_rebase() {
-    if [ -z "$1" ]; then
-        rebase_from=main
-    else
-        rebase_from=$1
-    fi
-    echo "Rebasing w.r.t. to $rebase_from branch..."
-    branch=`git rev-parse --abbrev-ref HEAD`
-    git checkout $rebase_from || return 1
-    git pull --rebase || return 1
-    git checkout $branch || return 1
-
-    git rebase $rebase_from || return 1
-}
-
-aptos_merge() {
-    git fetch
-    
-    if [ -z "$1" ]; then
-        rebase_from=main
-    else
-        rebase_from=$1
-    fi
-
-    # the `git fetch` was not enough, so will manually pull all changes to main
-    branch=`git rev-parse --abbrev-ref HEAD`
-    git checkout $rebase_from || return 1
-    git pull --rebase || return 1
-    git checkout $branch || return 1
-
-    git merge origin/$rebase_from --no-commit --no-ff
-}
 
 # pnpm
 export PNPM_HOME="/Users/alinush/Library/pnpm"

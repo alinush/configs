@@ -93,9 +93,35 @@ alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
 alias vim='vim -O'
 
-alias rst='repo-status.py'
-alias ru='repo-update.py'
-alias rc='repo-clone.py'
+# Helper function to run rpt scripts with venv
+function _rpt_run() {
+    local script="$1"
+    shift
+    local rpt_dir="$HOME/repos/rpt"
+    local venv_dir="$rpt_dir/venv"
+    
+    # Create venv if it doesn't exist
+    if [ ! -d "$venv_dir" ]; then
+        echo "Creating virtual environment..."
+        python3 -m venv "$venv_dir" || return 1
+    fi
+    
+    # Activate venv and install deps if needed
+    source "$venv_dir/bin/activate"
+    if ! python3 -c "import click" 2>/dev/null; then
+        echo "Installing dependencies..."
+        pip install -r "$rpt_dir/requirements.txt" || return 1
+    fi
+    
+    # Run the script with all arguments
+    "$rpt_dir/$script" "$@"
+    
+    deactivate
+}
+
+function rst() { _rpt_run "repo-status.py" "$@"; }
+function ru() { _rpt_run "repo-update.py" "$@"; }
+function rc() { _rpt_run "repo-clone.py" "$@"; }
 
 alias td='todo.sh -nt'
 alias tda='td add'
@@ -111,4 +137,37 @@ alias grep-apt='grep --exclude-dir=cached-packages --exclude-dir=build --exclude
 alias grep-sdk='grep-aptos --exclude-dir=dist --exclude-dir=docs --exclude-dir=node_modules --exclude="*.html"'
 alias grep-move='grep-aptos --include="*.move"'
 alias grep-toml='grep-aptos --include="*.toml"'
+
+aptos_rebase() {
+    if [ -z "$1" ]; then
+        rebase_from=main
+    else
+        rebase_from=$1
+    fi
+    echo "Rebasing w.r.t. to $rebase_from branch..."
+    branch=`git rev-parse --abbrev-ref HEAD`
+    git checkout $rebase_from || return 1
+    git pull --rebase || return 1
+    git checkout $branch || return 1
+
+    git rebase $rebase_from || return 1
+}
+
+aptos_merge() {
+    git fetch
+    
+    if [ -z "$1" ]; then
+        rebase_from=main
+    else
+        rebase_from=$1
+    fi
+
+    # the `git fetch` was not enough, so will manually pull all changes to main
+    branch=`git rev-parse --abbrev-ref HEAD`
+    git checkout $rebase_from || return 1
+    git pull --rebase || return 1
+    git checkout $branch || return 1
+
+    git merge origin/$rebase_from --no-commit --no-ff
+}
 
