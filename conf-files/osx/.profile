@@ -18,7 +18,6 @@ fi
 . ~/.bashrc
 
 export PATH="$HOME/.local/bin:$PATH"
-export PATH="$PATH:$HOME/repos/ck"
 export PATH="$PATH:$HOME/repos/rpt"
 export PATH="$PATH:$HOME/repos/badscripts"
 export PATH="$PATH:$HOME/repos/scripts/src"

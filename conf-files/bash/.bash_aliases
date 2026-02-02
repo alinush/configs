@@ -123,6 +123,30 @@ function rst() { _rpt_run "repo-status.py" "$@"; }
 function ru() { _rpt_run "repo-update.py" "$@"; }
 function rc() { _rpt_run "repo-clone.py" "$@"; }
 
+# Helper function to run ck with venv
+function ck() {
+    local ck_dir="$HOME/repos/ck"
+    local venv_dir="$ck_dir/venv"
+    
+    # Create venv if it doesn't exist
+    if [ ! -d "$venv_dir" ]; then
+        echo "Creating virtual environment..."
+        python3 -m venv "$venv_dir" || return 1
+    fi
+    
+    # Activate venv and install deps if needed
+    source "$venv_dir/bin/activate"
+    if ! python3 -c "import click" 2>/dev/null; then
+        echo "Installing dependencies..."
+        pip install -r "$ck_dir/requirements.txt" || return 1
+    fi
+    
+    # Run ck with all arguments
+    "$ck_dir/ck" "$@"
+    
+    deactivate
+}
+
 alias td='todo.sh -nt'
 alias tda='td add'
 alias tdo='vim ~/todo.txt'
