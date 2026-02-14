@@ -18,6 +18,7 @@ fi
 . ~/.bashrc
 
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$PATH:$HOME/repos/pws"
 export PATH="$PATH:$HOME/repos/rpt"
 export PATH="$PATH:$HOME/repos/badscripts"
 export PATH="$PATH:$HOME/repos/scripts/src"
@@ -36,6 +37,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # Rust
 . "$HOME/.cargo/env"
+eval "$(rustup completions bash cargo)"
 export RUST_MIN_STACK=4297152
 
 # Ruby
